@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ServiceService } from '../services/service.service';
 import { LoadingController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-/*import { LancamentoPage } from '../lancamento/lancamento.page';*/
+import { ProdutoPage } from '../produto/produto.page';
 
 
 
@@ -59,15 +59,15 @@ export class ListaPage {
     })
   }
 
-  /*async modal() {
+  async modal() {
     const modal = await this.modalController.create({
-      component: LancamentoPage
+      component: ProdutoPage
     });
     await modal.present();
 
     modal.onDidDismiss().then((dados) => {
       this.add(dados.data)
     })
-  }*/
+  }
 
 }

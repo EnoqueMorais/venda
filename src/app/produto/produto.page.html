@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastrar no Produto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/home/">
+        Home
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      Cadastro
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-input placeholder="Nome" [(ngModel)]="cliente.produto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="data" [(ngModel)]="cliente.data"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Desconto" [(ngModel)]="cliente.desconto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Valor" [(ngModel)]="cliente.valor"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="add()">Ok</ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

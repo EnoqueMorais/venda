@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditarModalPageModule } from './editar-modal/editar-modal.module'; //importar etapa 1
 import { Camera } from '@ionic-native/camera/ngx'; // importar etapa 2
 import { HttpClientModule } from '@angular/common/http';//Importar, etapa 3
+import { ProdutoPageModule } from './produto/produto.module'; //importar etapa 1
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';//Importar, etapa 3
     IonicModule.forRoot(), 
     AppRoutingModule,
     EditarModalPageModule, //Importar, etapa 1
-    HttpClientModule //Importar, etapa 3
+    HttpClientModule, //Importar, etapa 3
+    ProdutoPageModule
   ],
   providers: [
     StatusBar,
