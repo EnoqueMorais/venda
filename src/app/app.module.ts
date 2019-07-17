@@ -9,13 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { EditarModalPageModule } from './editar-modal/editar-modal.module'; //importar etapa 1
+import { Camera } from '@ionic-native/camera/ngx'; // importar etapa 2
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    EditarModalPageModule ////Importar, etapa 1
+  ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera, // importar etapa 2
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
