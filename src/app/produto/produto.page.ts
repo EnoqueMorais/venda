@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProdutoPage implements OnInit {
 
-  cliente = {
+  venda = {
     "produto": "",
     "data": "",
     "desconto": "",
@@ -22,7 +22,7 @@ export class ProdutoPage implements OnInit {
   }
 
   add() {
-    this.modal.dismiss(this.cliente)
+    this.modal.dismiss(this.venda)
   }
 
 }

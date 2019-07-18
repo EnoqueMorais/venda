@@ -12,11 +12,11 @@ export class ServiceService {
     return this.http.get("https://5d262f92eeb36400145c59c4.mockapi.io/venda/")
   }
 
-  post(cliente){
-    return this.http.post("https://5d262f92eeb36400145c59c4.mockapi.io/venda/", cliente)
+  post(venda){
+    return this.http.post("https://5d262f92eeb36400145c59c4.mockapi.io/venda/", venda)
   }
 
-  delete(cliente){
-    return this.http.delete("https://5d262f92eeb36400145c59c4.mockapi.io/venda/" + cliente)
+  delete(venda){
+    return this.http.delete("https://5d262f92eeb36400145c59c4.mockapi.io/venda/" + venda)
   }
 }

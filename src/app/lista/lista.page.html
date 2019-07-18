@@ -6,11 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-title>lista</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="modal()">
-        <ion-icon name="add-circle"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -18,14 +14,14 @@
 
   <ion-list>
 
-    <ion-item-sliding *ngFor="let cliente of clientes">
+    <ion-item-sliding *ngFor="let venda of vendas">
 
-      <ion-item href="/detail/{{cliente.id}}/">
-        {{cliente.produto}}
+      <ion-item href="/detail/{{venda.id}}/">
+        {{venda.produto}}
       </ion-item>
 
       <ion-item-options>
-        <ion-item-option (click)="remove(cliente)">
+        <ion-item-option (click)="remove(venda)">
           <ion-icon ios="ios-trash" md="md-trash" slot="end"></ion-icon>
         </ion-item-option>
       </ion-item-options>
@@ -33,5 +29,9 @@
     </ion-item-sliding>
 
   </ion-list>
-
+  <ion-fab (click)="modal()" class="button-native" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="md-add-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

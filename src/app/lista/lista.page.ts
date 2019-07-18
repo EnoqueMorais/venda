@@ -14,7 +14,7 @@ import { ProdutoPage } from '../produto/produto.page';
 })
 export class ListaPage {
 
-  clientes;
+  vendas;
 
   constructor(private http: HttpClient, public service: ServiceService, public loadingController: LoadingController, public modalController: ModalController) {
     this.loadingController.create({
@@ -23,36 +23,36 @@ export class ListaPage {
       loader.present()
       this.service.list().subscribe(
         (data) => {
-          this.clientes = data
+          this.vendas = data
           loader.dismiss()
         }
       )
     })
   }
 
-  remove(cliente) {
+  remove(venda) {
     this.loadingController.create({
       message: "Carregando"
     }).then((loader) => {
       loader.present()
-      this.service.delete(cliente.id).subscribe(
+      this.service.delete(venda.id).subscribe(
         (data) => {
-          var i = this.clientes.indexOf(cliente);
-          this.clientes.splice(i, 1);
+          var i = this.vendas.indexOf(venda);
+          this.vendas.splice(i, 1);
           loader.dismiss()
         }
       )
     })
   }
 
-  add(cliente) {
+  add(venda) {
     this.loadingController.create({
       message: "Carregando"
     }).then((loader) => {
       loader.present()
-      this.service.post(cliente).subscribe(
+      this.service.post(venda).subscribe(
         (data) => {
-          this.clientes.push(data)
+          this.vendas.push(data)
           loader.dismiss()
         }
       )

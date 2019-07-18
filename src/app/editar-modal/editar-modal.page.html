@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="/home/">
+        Home
+      </ion-button>
+    </ion-buttons>
     <ion-title>Editar Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,10 +23,10 @@
 
       <ion-card>
         <img src="{{usuarios.foto}}" alt="">
-        <ion-button expand="full" (click)="tirar_foto()">Take</ion-button>
+        <ion-button expand="full" (click)="tirar_foto()">Tirar Foto</ion-button>
       </ion-card>
 
-      <ion-button expand="block" (click)="atualizar()">Atualizar</ion-button>
+      <ion-button expand="block" (click)="atualizar()">Ok</ion-button>
 
 
     </ion-card-content>

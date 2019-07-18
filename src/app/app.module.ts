@@ -13,6 +13,7 @@ import { EditarModalPageModule } from './editar-modal/editar-modal.module'; //im
 import { Camera } from '@ionic-native/camera/ngx'; // importar etapa 2
 import { HttpClientModule } from '@angular/common/http';//Importar, etapa 3
 import { ProdutoPageModule } from './produto/produto.module'; //importar etapa 1
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProdutoPageModule } from './produto/produto.module'; //importar etapa 1
     AppRoutingModule,
     EditarModalPageModule, //Importar, etapa 1
     HttpClientModule, //Importar, etapa 3
-    ProdutoPageModule
+    ProdutoPageModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,

@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'editar-modal', loadChildren: './editar-modal/editar-modal.module#EditarModalPageModule' },
   { path: 'lista', loadChildren: './lista/lista.module#ListaPageModule' },
   { path: 'produto', loadChildren: './produto/produto.module#ProdutoPageModule' },
+  { path: 'detail/:id', loadChildren: './detail/detail.module#DetailPageModule' },
 ];
 
 @NgModule({

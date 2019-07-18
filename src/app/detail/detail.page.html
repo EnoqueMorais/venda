@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="/lista/">
+        Lista
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalhes do Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>ID: {{venda.id}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nome: {{venda.produto}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data: {{venda.data}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Desconto: {{venda.desconto}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label> Valor: {{venda.valor}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
